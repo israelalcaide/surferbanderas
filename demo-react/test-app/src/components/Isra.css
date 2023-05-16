@@ -1,0 +1,94 @@
+.contenedorTexto {
+  width: 30vh;
+  height: 95vh;
+  border-radius: 10px;
+  background-color: rgb(44, 164, 180);
+  box-shadow: 5px 5px 5px;
+  overflow: hidden;
+  margin: 1em;
+  padding: 0.8em;
+  text-align: center;
+  transition: all 0.50s;
+}
+.contenedorCajas {
+  display: flex;
+  justify-content: center;
+}
+@media screen and (max-widht: 700px) {
+  .contenedorCajas {
+    display: inline-block;
+    margin: auto;
+    padding: auto;
+  }
+}
+.contenedorImagen:not(.show-front) {
+  transform: rotateY(180deg);
+}
+
+.contenedorTitulo {
+  background: linear-gradient(to right, #1e0b02, #ff0000);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "Pacifico";
+
+  font-size: 1.3em;
+  text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.4),
+    -2px -2px 5px rgba(0, 0, 0, 0.4), 2px -2px 5px rgba(255, 0, 0, 0.4),
+    -2px 2px 5px rgba(0, 255, 0, 0.4), 0px 0px 10px rgba(255, 255, 255, 0.4);
+}
+
+.contenedorTexto:hover {
+  transform: translateY(-3px);
+  box-shadow: 10px 15px 30px;
+}
+.contenedorImagen {
+  width: 98%;
+  height: 60%;
+  object-fit: cover;
+  border-radius: 0.5em;
+  border: 3px solid rgb(240, 206, 12);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.contenedorImagen:hover {
+  transition-duration: 1.1s;
+  transform: scale(2) translateY(40px);
+  border-color: #ffd819;
+  box-shadow: 5px 5px 5px rgba(255, 6, 6, 0.5);
+}
+
+.buttonInfo,
+.buttonName,
+.buttonNation, 
+.buttonChoose {
+  min-width: 18vh;
+
+  height: 25px;
+  color: #100000;
+  padding: 1px 3px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  outline: none;
+  border-radius: 5px;
+  border: none;
+  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
+    7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+  background: #ffd819;
+  margin: 0.3em;
+}
+.buttonInfo:hover,
+.buttonName:hover,
+.buttonNation:hover {
+  background-color: aliceblue;
+  transform: translateY(-3px);
+  box-shadow: 10px 15px 30px;
+  transform: scale(1.3);
+  color: red;
+  border: solid rgb(212, 49, 49) 1.5px;
+}
+.botonMasInfo:active {
+  top: 2px;
+}
